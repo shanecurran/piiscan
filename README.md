@@ -22,7 +22,7 @@ The module exposes two methods:
 
 ### Scanning structured data for PII
 
-```
+```python
 import piiscan
 
 original_value = '''
@@ -54,7 +54,7 @@ Expected result printed in console:
 
 ### Annotating data to display discovered PII
 
-```
+```python
 import piiscan
 
 original_value = '''
