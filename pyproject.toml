@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "piiscan"
-version = "0.1.1"
+version = "0.1.2"
 description = "Easy, lightweight PII scanning for network requests and logs—powered by Microsoft Presidio and en_spacy_pii_fast"
 authors = ["Shane Curran <shane@curran.ie>"]
 readme = "README.md"
