@@ -1,7 +1,6 @@
 pandas
 streamlit
 presidio-analyzer
-spacy
 torch
 altair<5
 st-annotated-text

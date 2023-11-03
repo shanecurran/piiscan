@@ -1,10 +1,13 @@
 import logging
 from typing import Optional, List, Tuple, Set
+
 from presidio_analyzer import (
     RecognizerResult,
     LocalRecognizer,
     AnalysisExplanation,
 )
+from presidio_analyzer.nlp_engine import NlpArtifacts
+from presidio_analyzer.predefined_recognizers.spacy_recognizer import SpacyRecognizer
 
 logger = logging.getLogger("presidio-analyzer")
 
@@ -48,6 +51,7 @@ class CustomSpacyRecognizer(LocalRecognizer):
         supported_language: str = "en",
         supported_entities: Optional[List[str]] = None,
         check_label_groups: Optional[Tuple[Set, Set]] = None,
+        context: Optional[List[str]] = None,
         ner_strength: float = 0.85,
     ):
         self.ner_strength = ner_strength
@@ -87,7 +91,7 @@ class CustomSpacyRecognizer(LocalRecognizer):
         )
         return explanation
 
-    def analyze(self, entities, nlp_artifacts=None):  # noqa D102
+    def analyze(self, text, entities, nlp_artifacts=None):  # noqa D102
         results = []
         if not nlp_artifacts:
             logger.warning("Skipping SpaCy, nlp artifacts not provided...")

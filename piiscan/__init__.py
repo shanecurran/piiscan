@@ -1,6 +1,7 @@
-from piiscan.spacy_recognizer import CustomSpacyRecognizer
+from piiscan.recognizer import CustomSpacyRecognizer
 from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_analyzer import AnalyzerEngine, RecognizerRegistry
+
 
 # Helper methods
 def analyzer_engine():
@@ -17,9 +18,11 @@ def analyzer_engine():
     nlp_engine = provider.create_engine()
 
     registry = RecognizerRegistry()
+
     # add rule-based recognizers
     registry.load_predefined_recognizers(nlp_engine=nlp_engine)
     registry.add_recognizer(spacy_recognizer)
+
     # remove the nlp engine we passed, to use custom label mappings
     registry.remove_recognizer("SpacyRecognizer")
 
@@ -30,5 +33,5 @@ def analyzer_engine():
     return analyzer
 
 
-def scan(text, language="en", score_threshold=0.35):
-    return analyzer_engine().analyze(text, language, score_threshold)
+def scan(text):
+    return analyzer_engine().analyze(text, language="en", score_threshold=0.35)
