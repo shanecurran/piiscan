@@ -2,9 +2,9 @@
 
 [![PyPI version](https://badge.fury.io/py/piiscan.svg)](https://badge.fury.io/py/piiscan)
 
-A simple Python library that detects PII in text. Optimized for network traffic and structured data (e.g. JSON Objects, HTTP Requests)
+A simple Python library that detects PII in text. Optimized for network traffic and structured data (e.g. JSON Objects, HTTP Requests).
 
-Powered by [`beki/en_spacy_pii_fast`](https://huggingface.co/beki/en_spacy_pii_fast) and [Microsoft Presidio](https://microsoft.github.io/presidio/)
+Powered by [`beki/en_spacy_pii_fast`](https://huggingface.co/beki/en_spacy_pii_fast) and [Microsoft Presidio](https://microsoft.github.io/presidio/).
 
 ## Installation
 
