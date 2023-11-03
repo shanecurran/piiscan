@@ -1,4 +1,4 @@
-# PIIScan
+# piiscan
 
 [![PyPI version](https://badge.fury.io/py/piiscan.svg)](https://badge.fury.io/py/piiscan)
 
