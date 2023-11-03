@@ -1,0 +1,8 @@
+pandas
+streamlit
+presidio-analyzer
+spacy
+torch
+altair<5
+st-annotated-text
+https://huggingface.co/beki/en_spacy_pii_fast/resolve/main/en_spacy_pii_fast-any-py3-none-any.whl
