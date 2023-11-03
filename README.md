@@ -43,7 +43,13 @@ print(detected_pii)
 Expected result printed in console:
 
 ```
-[type: EMAIL_ADDRESS, start: 41, end: 53, score: 1.0, type: PERSON, start: 16, end: 24, score: 0.85, type: LOCATION, start: 72, end: 107, score: 0.85, type: URL, start: 46, end: 53, score: 0.5, type: PHONE_NUMBER, start: 127, end: 141, score: 0.4]
+[
+    type: EMAIL_ADDRESS, start: 41, end: 53, score: 1.0, 
+    type: PERSON, start: 16, end: 24, score: 0.85, 
+    type: LOCATION, start: 72, end: 107, score: 0.85, 
+    type: URL, start: 46, end: 53, score: 0.5, 
+    type: PHONE_NUMBER, start: 127, end: 141, score: 0.4
+]
 ```
 
 ### Annotating data to display discovered PII
@@ -87,4 +93,4 @@ This project uses [Benjamin Kilimnik](https://kilimnik.org/)'s [`en_spacy_pii_fa
 
 This library was designed for use in resource-constrained environments, hence the small 7 MiB `en_spacy_pii_fast` model. However, if you would like to increased accuracy there are other alternatives described in the [original blog post](https://blog.px.dev/detect-pii/).
 
-This library also makes use of [Microsoft Presidio](https://microsoft.github.io/presidio/), and [spaCy](https://spacy.io/).
+This library also makes use of [Microsoft Presidio](https://microsoft.github.io/presidio/) and [spaCy](https://spacy.io/).
