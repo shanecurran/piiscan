@@ -33,5 +33,25 @@ def analyzer_engine():
     return analyzer
 
 
+def annotate(text, st_analyze_results):
+    tokens = []
+    # sort by start index
+    results = sorted(st_analyze_results, key=lambda x: x.start)
+    for i, res in enumerate(results):
+        if i == 0:
+            tokens.append(text[: res.start])
+
+        # append entity text and entity type
+        tokens.append((text[res.start : res.end], res.entity_type))
+
+        # if another entity coming i.e. we're not at the last results element, add text up to next entity
+        if i != len(results) - 1:
+            tokens.append(text[res.end : results[i + 1].start])
+        # if no more entities coming, add all remaining text
+        else:
+            tokens.append(text[res.end :])
+    return tokens
+
+
 def scan(text):
     return analyzer_engine().analyze(text, language="en", score_threshold=0.35)

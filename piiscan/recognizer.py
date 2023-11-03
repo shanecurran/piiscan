@@ -109,6 +109,7 @@ class CustomSpacyRecognizer(LocalRecognizer):
                 explanation = self.build_spacy_explanation(
                     self.ner_strength, textual_explanation
                 )
+
                 spacy_result = RecognizerResult(
                     entity_type=entity,
                     start=ent.start_char,
@@ -119,6 +120,7 @@ class CustomSpacyRecognizer(LocalRecognizer):
                         RecognizerResult.RECOGNIZER_NAME_KEY: self.name
                     },
                 )
+
                 results.append(spacy_result)
 
         return results
