@@ -1,4 +1,4 @@
-from spacy_recognizer import CustomSpacyRecognizer
+from piiscan.spacy_recognizer import CustomSpacyRecognizer
 from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_analyzer import AnalyzerEngine, RecognizerRegistry
 
