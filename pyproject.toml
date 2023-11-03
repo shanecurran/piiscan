@@ -11,6 +11,7 @@ python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
 pre-commit = "^3.5.0"
+scriv = {extras = ["toml"], version = "^1.5.0"}
 
 [build-system]
 requires = ["poetry-core"]
