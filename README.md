@@ -91,6 +91,6 @@ The basis for this project is derived from [Pixie Labs' blog post](https://blog.
 
 This project uses [Benjamin Kilimnik](https://kilimnik.org/)'s [`en_spacy_pii_fast`](https://huggingface.co/beki/en_spacy_pii_fast) spaCy model for NER. It is trained using a [dataset](https://huggingface.co/datasets/beki/privy) derived from Privy's synthetic payload generator. The entire model is less than 7 MiB!
 
-This library was designed for use in resource-constrained environments, hence the small 7 MiB `en_spacy_pii_fast` model. However, if you would like to increased accuracy there are other alternatives described in the [original blog post](https://blog.px.dev/detect-pii/).
+This library was designed for use in resource-constrained environments, hence the small 7 MiB `en_spacy_pii_fast` model. However, if you would like increased accuracy there are other alternatives described in the [original blog post](https://blog.px.dev/detect-pii/).
 
 This library also makes use of [Microsoft Presidio](https://microsoft.github.io/presidio/) and [spaCy](https://spacy.io/).
